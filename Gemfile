@@ -25,7 +25,8 @@ gem 'delayed_job_active_record'
 gem 'foreman'
 gem 'redcarpet', '~> 3.2.2'
 gem 'premailer', '~> 1.8.3'
-
+gem 'font-awesome-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
