@@ -1,10 +1,10 @@
-<% @page_title = "History" %>
+<% @page_title = "Incident Archive" %>
 <%= render 'page_header' %>
 
 <section class='history'>
   <div class='container'>
-    <h1 class='history__heading'><%= t('themes.default.history.title', :default => 'Issue &amp; Maintenance History'.html_safe) %></h1>
-    <p class='history__info'><%= t('themes.default.history.intro', :default => "This page shows all current & historical issues & maintenance sessions.".html_safe) %></p>
+    <h1 class='history__heading'><%= t('themes.default.history.title', :default => 'Incident Archive'.html_safe) %></h1>
+    <p class='history__info'><%= t('themes.default.history.intro', :default => "This page shows current and historical issues and maintenance.".html_safe) %></p>
 
     <% for month, items in @items.group_by(&:month) %>
     <div class='history__items'>

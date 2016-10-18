@@ -1,4 +1,18 @@
-<header class='pageHeader'>
-  <a href='/' class='button'>&larr; Homepage</a>
-  <p class='pageHeader__title'><%= site.title %></p>
+<header class='siteHeader <% if site.cover_image %>has-coverImage<% end %>' <% if site.cover_image%>style='background-image:url(<%= site.cover_image.path %>)'<% end%>>
+  <% if site.logo %>
+      <p class='siteHeader__logo'><%= image_tag site.logo.path %></p>
+  <% end %>
+  <% if site.allow_subscriptions? %>
+      <p class='siteHeader__subscribe'>
+        <a class='siteHeader__button' href='/subscribe'>Subscribe</a>
+      </p>
+  <% end %>
+  <div class='container'>
+    <p class='siteHeader__title'><%= site.title %></p>
+  </div>
 </header>
+<div class="container">
+  <div class="breadcrumbs">
+<a href='/'>Status Home</a> &gt; <%= @page_title %>
+    </div>
+</div>
